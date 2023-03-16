@@ -18,11 +18,3 @@ app.addRouter(genreRouter);
 app.addRouter(filmGenreRouter);
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
-
-const start = async () => {
-    try {
-
-    } catch (err) {
-        console.log(err);
-    }
-};
