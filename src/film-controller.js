@@ -22,7 +22,7 @@ module.exports = class FilmController {
         try {
             const {title, year} = req.body;
             const newFilm = await db.query(`INSERT INTO film (title, year) values ($1, $2) RETURNING *`, [title, year]);
-            res.send(newFilm);
+            res.send(newFilm.rows);
         } catch (err) {
             res.send(err);
         }
